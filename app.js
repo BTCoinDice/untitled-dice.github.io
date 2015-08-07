@@ -1,29 +1,18 @@
-// Untitled Dice v0.0.6
+// BTCoinDice v1.1.1
 
 // Customize these configuration settings:
 
 var config = {
-  // - Your app's id on moneypot.com
-  app_id: 18,                             // <----------------------------- EDIT ME!
-  // - Displayed in the navbar
-  app_name: 'Untitled Dice',
-  // - For your faucet to work, you must register your site at Recaptcha
-  // - https://www.google.com/recaptcha/intro/index.html
-  recaptcha_sitekey: '6LfI_QUTAAAAACrjjuzmLw0Cjx9uABxb8uguLbph',  // <----- EDIT ME!
-  redirect_uri: 'https://untitled-dice.github.io',
+  app_id: 508,                         
+  app_name: 'BTCoinDice',
+  recaptcha_sitekey: '6Lf74AoTAAAAAGv2Qangztln9H3Cxuoazyroz264',
+  redirect_uri: 'https://BTCoinDice.github.io',
   mp_browser_uri: 'https://www.moneypot.com',
   mp_api_uri: 'https://api.moneypot.com',
   chat_uri: 'https://a-chat-server.herokuapp.com',
-  // - Show debug output only if running on localhost
-  debug: isRunningLocally(),
-  // - Set this to true if you want users that come to http:// to be redirected
-  //   to https://
   force_https_redirect: !isRunningLocally()
 };
 
-////////////////////////////////////////////////////////////
-// You shouldn't have to edit anything below this line
-////////////////////////////////////////////////////////////
 
 if (config.force_https_redirect && window.location.protocol !== "https:") {
   window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
